@@ -61,7 +61,7 @@ export const getChapterNovel = async (
   slugChapter: string,
 ): Promise<IChapterNovel> => {
   try {
-    const response = await api.get(`/novels/${slugNovel}/${slugChapter}`);
+    const response = await api.get(`/novels/capitulos/${slugNovel}/${slugChapter}`);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -85,7 +85,7 @@ export const getChaptersComic = async (
   slugComic: string,
 ): Promise<IChapterComic[]> => {
   try {
-    const response = await api.get(`/comics/slug/${slugComic}`);
+    const response = await api.get(`/comics/capitulos/slug/${slugComic}`);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -98,7 +98,7 @@ export const getChapterComicBySlug = async (
   slugChapter: string,
 ): Promise<IImageChapterComic> => {
   try {
-    const response = await api.get(`/comics/${slugComic}/${slugChapter}`);
+    const response = await api.get(`/comics/capitulos/${slugComic}/${slugChapter}`);
     return response.data;
   } catch (error) {
     console.error(error);
